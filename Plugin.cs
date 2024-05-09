@@ -10,13 +10,13 @@ namespace SpeedrunTools
         public static ManualLogSource LoggerInstance { get; private set; }
 
         private Harmony _harmony;
-        
+
         private void Awake()
         {
             LoggerInstance = Logger;
 
             _harmony = new(PluginInfo.PLUGIN_GUID);
-            _harmony.Patch(typeof(Player).GetProperty("health").SetMethod, prefix: new HarmonyMethod(typeof(PlayerPatch), "SetHealth"));
+            _harmony.PatchAll(typeof(PlayerPatch));
 
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
