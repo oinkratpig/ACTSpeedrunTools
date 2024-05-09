@@ -24,13 +24,11 @@ namespace SpeedrunTools
         [HarmonyPatch(typeof(Player), "Update")] [HarmonyPostfix]
         public static void Update()
         {
-            Plugin.LoggerInstance.LogInfo("update");
-
             // Toggle God mode
             if (Input.GetKeyDown(SpeedrunTools.KeyCodes[SpeedrunTools.Tools.GodMode]))
             {
-                Plugin.LoggerInstance.LogInfo("Toggling God mode.");
                 SpeedrunTools.GodMode = !SpeedrunTools.GodMode;
+                Plugin.LoggerInstance.LogInfo($"God mode now {((SpeedrunTools.GodMode) ? "enabled" : "disabled")}.");
             }
 
         } // end Update
