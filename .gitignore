@@ -401,3 +401,4 @@ FodyWeavers.xsd
 
 # Added by oinky
 .vs/*
+SpeedrunTools.csproj
