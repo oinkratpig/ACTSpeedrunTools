@@ -22,7 +22,7 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Another Crab's Treasure\AnotherCrabsTreasure_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\lib\Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
